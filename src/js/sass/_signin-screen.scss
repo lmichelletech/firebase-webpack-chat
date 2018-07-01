@@ -1,0 +1,41 @@
+// signin-screen.scss
+.sign-in-screen{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom, #cccccc 0%, #46b5da 44%, #ffffff 100%); 
+    
+}
+
+.sign-in-inputs-container{
+    flex: 1;
+    width: 100%;
+}
+
+.sign-in-input-container{
+    width: 100%;
+    margin: 0 auto;
+}
+.sign-in-input-label{
+   padding: 0 10px;
+}
+
+.sign-in-input{
+    box-sizing: border-box;
+    width: 90%;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    background: transparent;
+}
+
+.sign-in-input:focus{
+    border-bottom: 2px solid rgb(255, 220, 62);
+}

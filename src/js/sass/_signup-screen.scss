@@ -1,0 +1,98 @@
+// signup-screen.scss
+.sign-up-input:focus{
+    border-bottom: 2px solid rgb(255, 220, 62);
+}
+
+.file-input-container{
+    display: inline-flex;
+    padding: 10px;
+    padding-bottom: 10px;
+}
+
+.upload-group{
+    margin-left: 10px;
+}
+
+
+.sign-up-screen{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    height: 108vh;
+    width: 100vw;
+    background: linear-gradient(to bottom, #cccccc 0%, #46b5da 44%, #ffffff 100%);
+}
+
+.sign-up-input{
+    box-sizing: border-box;
+    width: 90%;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    background: transparent;
+}
+
+
+.sign-up-inputs-container{
+    flex: 1;
+    width: 100%;
+}
+.sign-up-input-container{
+    width: 100%;
+}
+.sign-up-input-label{
+    padding: 0 10px;
+ }
+ 
+
+ 
+$bkBtnSize: 52px;
+.bk-btn {
+  height: $bkBtnSize;
+  width: $bkBtnSize;
+  background-color:#0099cc;
+  border-radius: 50%;
+  .bk-btn-triangle {
+    position: relative;
+    top: $bkBtnSize*0.25;
+    left: $bkBtnSize*0.2;
+    width: 0; 
+    height: 0; 
+    border-top: $bkBtnSize*0.25 solid transparent;
+    border-bottom: $bkBtnSize*0.25 solid transparent; 
+    border-right: $bkBtnSize*0.25 solid white; 
+  }
+  .bk-btn-bar {
+    position: relative;
+    background-color: white;
+    height: $bkBtnSize*0.15;
+    width: $bkBtnSize*0.25;
+    top: $bkBtnSize*-0.07;
+    left: $bkBtnSize*0.44;
+  }
+}
+
+.bk-btn:hover {
+    background-color:#ff9900;
+}
+
+.direction-container{
+    height: 35%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 10px;
+    top: 20px;
+}
+
+.back-btn{
+    top: 10px;
+    left: 0;
+    font-size: 20px;
+}
+

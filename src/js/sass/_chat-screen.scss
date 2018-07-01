@@ -1,0 +1,51 @@
+// chat-screen.scss - messages bubbles are in file message-boxes.scss
+
+.chat-screen{
+    height: 99vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+        
+    .chat-header{
+        height: 50px;
+        /* top and bottom then sides */
+        padding: 0px 10px;
+        background-color: #000;
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+        color: white;
+        align-items: center;
+    }
+
+    .sign-out-btn{
+        height: 40px;
+        width: 40px;
+        color: #fff;
+        background-color: #000;
+    }
+
+    .chat-screen-input-container{
+        height: 50px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        border-top: 2px solid;
+    }
+
+    .chat-screen-input{
+        height: 100%;
+        flex: 1;
+        font-size: 16px;
+    }
+
+    .chat-screen-send-msg-btn{
+        height: 50px;
+        width: 50px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+
+}

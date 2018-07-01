@@ -1,0 +1,120 @@
+// global.scss
+$font-stack:    "Montserrat", sans-serif;
+$primary-text-color: #333;
+$main-background-color: #00c4ff;
+
+body{
+    margin: 0;
+    padding: 0;
+    font: 100% $font-stack;
+    color: $primary-text-color;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+%scale{
+    -ms-transform: translate(2px, -4px); /* IE 9 */
+  -webkit-transform: translate(2px, -4px); /* Safari */
+  transform: translate(2px, -4px);
+}
+
+%rotate{
+    -ms-transform: rotate(25deg); /* IE 9 */
+-webkit-transform: rotate(25deg); /* Chrome, Safari, Opera */
+transform: rotate(25deg);
+}
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+        -ms-transform: $property;
+            transform: $property;
+  }
+
+  .icon{
+    font-size: 45px;
+    padding-left: 5px;
+    color: rgb(39, 37, 37);
+    max-width: 50px;
+}
+
+.icon:hover{
+    @extend %scale;
+}
+
+.copyright{
+ bottom: 0;
+ text-align: center;
+ font-size: 50%;
+ padding-top: 50px;
+}
+
+.logo-container{
+    height: 35%;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.logo{
+    font-size: 40px;
+}
+
+.ion-md-chatbubbles{
+    font-size: 130px;
+    color: rgb(39, 37, 37);
+    animation: bubbles-background 1s infinite alternate;
+}
+
+
+@keyframes bubbles-background{
+    from{
+        color: #ff9900;
+    }
+    to{
+        color: #f8c77e;;
+    }
+}
+
+
+
+.auth-icons-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-icon{
+    font-size: 40px;
+    margin: 20px 50px;
+}
+
+.btn-container{
+    width: 100%;
+}
+
+.btn{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+
+.accent-color-1{
+    background-color: #f8c77e;
+}
+.accent-color-1:hover{
+    background-color: #ff9900;
+}
+.accent-color-2{
+    background: #0099cc;
+}
+.accent-color-2:hover{
+    background: #2da6ce;
+}
