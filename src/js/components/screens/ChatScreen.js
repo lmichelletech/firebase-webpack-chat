@@ -45,10 +45,12 @@ function ChatScreen(user){
 
         <div class="chat-screen-input-container">
             <div class="chat-icons-container">
-                <img id="e-angry" class="icon" src="./images/e-angry.png" name="e-angry.png">
+                <img id="e-angry" class="icon" src="./images/e-angry.png">
                 <img id="e-sleepy" class="icon" src="./images/e-sleepy.png">
                 <img id="e-anxious" class="icon" src="./images/e-anxious.png">
                 <img id="e-laugh" class="icon" src="./images/e-laugh.png">
+                <img id="e-kiss" class="icon" src="./images/e-kiss.png">
+                <img id="e-love" class="icon" src="./images/e-love.png">
             </div>
             <div class="chat-input-container">
                 <input type="text" id="chat-screen-input" class="chat-screen-input">
@@ -86,11 +88,69 @@ function initializeChatScreenEventListeners(user){
         var spaceRef = storageRef.child('e-angry.png');
         var emojiUrl = spaceRef.getDownloadURL().then((url) => {
             console.log('Emoji URL >>>>>>>>>>>>>  ', url);
-            
             sendEmoji(user.uid, user.displayName, user.email, user.photoURL, url)
         })
+    });
+    
+    $('#e-anxious').on('click', function(){
+        
+        var user = firebase.auth().currentUser;
+        var storage = firebase.storage();
+        var storageRef = storage.ref('emojis');
+        var spaceRef = storageRef.child('e-anxious.png');
+        var emojiUrl = spaceRef.getDownloadURL().then((url) => {
+            console.log('Emoji URL >>>>>>>>>>>>>  ', url);
+            sendEmoji(user.uid, user.displayName, user.email, user.photoURL, url)
+        })
+    });
+    
+    $('#e-sleepy').on('click', function(){
+        
+        var user = firebase.auth().currentUser;
+        var storage = firebase.storage();
+        var storageRef = storage.ref('emojis');
+        var spaceRef = storageRef.child('e-sleepy.png');
+        var emojiUrl = spaceRef.getDownloadURL().then((url) => {
+            console.log('Emoji URL >>>>>>>>>>>>>  ', url);
+            sendEmoji(user.uid, user.displayName, user.email, user.photoURL, url)
+        })
+    });
+    
+    $('#e-laugh').on('click', function(){
+        
+        var user = firebase.auth().currentUser;
+        var storage = firebase.storage();
+        var storageRef = storage.ref('emojis');
+        var spaceRef = storageRef.child('e-laugh.png');
+        var emojiUrl = spaceRef.getDownloadURL().then((url) => {
+            console.log('Emoji URL >>>>>>>>>>>>>  ', url);
+            sendEmoji(user.uid, user.displayName, user.email, user.photoURL, url)
+        })
+    });
 
-      
+    $('#e-love').on('click', function(){
+        
+        var user = firebase.auth().currentUser;
+        var storage = firebase.storage();
+        var storageRef = storage.ref('emojis');
+        var spaceRef = storageRef.child('e-love.png');
+        var emojiUrl = spaceRef.getDownloadURL().then((url) => {
+            console.log('Emoji URL >>>>>>>>>>>>>  ', url);
+            sendEmoji(user.uid, user.displayName, user.email, user.photoURL, url)
+        })
+    });
+
+    
+    $('#e-kiss').on('click', function(){
+        
+        var user = firebase.auth().currentUser;
+        var storage = firebase.storage();
+        var storageRef = storage.ref('emojis');
+        var spaceRef = storageRef.child('e-kiss.png');
+        var emojiUrl = spaceRef.getDownloadURL().then((url) => {
+            console.log('Emoji URL >>>>>>>>>>>>>  ', url);
+            sendEmoji(user.uid, user.displayName, user.email, user.photoURL, url)
+        })
     });
     
 
@@ -110,7 +170,7 @@ function initializeChatScreenEventListeners(user){
             $("#chat-screen-messages-container").append(
                 `<div class="msg-div ${side}">
                     <div style="${margin}">
-                        <img class="profile-img" src="${user.photoURL || './images/user.png'}" height="40px" width="auto">
+                        <img class="profile-img" src="${msg.img || './images/user.png'}" height="40px" width="auto">
                     </div>
                     <div style="flex-grow: 1; padding: 10px;" class="talk-bubble tri-right ${corner}">
                         <div class="name"><strong>${msg.name}</strong>:</div>
